@@ -457,9 +457,8 @@ nav {
 
   .site__secondary_title {
     display: block; }
+  }
 
 @media only screen and (min-width: 1400px) {
   .right .site__description {
     column-count: 2; } }
-
-/*# sourceMappingURL=dropcast.css.map */
