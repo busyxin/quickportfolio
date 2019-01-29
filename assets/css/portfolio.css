@@ -181,18 +181,18 @@ nav {
   .site__navigation .site__navigation_items--right {
     background-color: #F79E77;
     padding-left: 5rem;
-    text-align: right; }
+    text-align: right;}
     .site__navigation .site__navigation_items--right label {
-      color: #f15917; }
+      color: #fff; }
     .site__navigation .site__navigation_items--right:hover {
       background-color: #f15917; }
       .site__navigation .site__navigation_items--right:hover label {
         color: #692406; }
   .site__navigation .site__navigation_items--left {
     background-color: #7CCDB9;
-    padding-right: 5rem; }
+    padding-right: 5rem;}
     .site__navigation .site__navigation_items--left label {
-      color: #3fa48b; }
+      color: #fff; }
     .site__navigation .site__navigation_items--left:hover {
       background-color: #3fa48b; }
       .site__navigation .site__navigation_items--left:hover label {
@@ -322,7 +322,7 @@ nav {
 }
 
 .project-gallery-item {
-  max-width: 200px;
+  max-width: 210px;
   margin-bottom: 2rem;
   width: 100%;
 }
@@ -448,9 +448,9 @@ nav {
     width: 50%; }
 
   .left {
-    padding-left: 5rem;
+    padding-left: 4rem;
     padding-top: 5rem;
-    padding-right: 5rem;
+    padding-right: 4rem;
     display: flex;
     flex-direction: column; }
     .left .site__title.site__title--separator:after {
