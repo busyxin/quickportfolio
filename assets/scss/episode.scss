@@ -1,54 +1,54 @@
-.episode {
+.project {
   position: relative;
   display: flex;
   &:nth-child(1) {
-    .episode__image {
+    .project__image {
       background-image: url(../images/photos/edited/1.png);
     }
   }
   &:nth-child(2) {
-    .episode__image {
+    .project__image {
       background-image: url(../images/photos/edited/2.png);
     }
   }
   &:nth-child(3) {
-    .episode__image {
+    .project__image {
       background-image: url(../images/photos/edited/3.png);
     }
   }
   &:nth-child(4) {
-    .episode__image {
+    .project__image {
       background-image: url(../images/photos/edited/4.png);
     }
   }
   &:hover {
-    .episode__detail:before {
+    .project__detail:before {
       width: 100%;
     }
     &:nth-child(1) {
-      .episode__image {
+      .project__image {
         background-image: url(../images/photos/original/1.png);
       }
     }
     &:nth-child(2) {
-      .episode__image {
+      .project__image {
         background-image: url(../images/photos/original/2.png);
       }
     }
     &:nth-child(3) {
-      .episode__image {
+      .project__image {
         background-image: url(../images/photos/original/3.png);
       }
     }
     &:nth-child(4) {
-      .episode__image {
+      .project__image {
         background-image: url(../images/photos/original/4.png);
       }
     }
   }
 }
 
-.episode__number {
+.project__number {
   display: none;
   position: absolute;
   top: -2rem;
@@ -59,7 +59,7 @@
   color: $purple;
 }
 
-.episode__image {
+.project__image {
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -68,7 +68,7 @@
   display: block;
 }
 
-.episode__media {
+.project__media {
   position: relative;
   width: 30%;
   transition: .2s ease-out;
@@ -88,7 +88,7 @@
   }
 }
 
-.episode__detail {
+.project__detail {
   width: 70%;
   padding: 0 1rem;
   position: relative;
@@ -105,7 +105,7 @@
   }
 }
 
-.episode__title h4{
+.project__title h4{
   font-size: 1.6rem;
   margin: 1rem 0 .3rem 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -115,7 +115,7 @@
   }
 }
 
-.episode__description {
+.project__description {
   margin-top: 0;
   font-size: 1.1rem;
   font-weight: 100;

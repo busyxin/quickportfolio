@@ -6,12 +6,12 @@ var sliders = audioPlayer.querySelectorAll('.slider');
 var player = audioPlayer.querySelector('audio');
 var currentTime = audioPlayer.querySelector('.current-time');
 var totalTime = audioPlayer.querySelector('.total-time');
-var episodeBtn1 = document.querySelector('#episodeBtn--1');
-var episodeBtn2 = document.querySelector('#episodeBtn--2');
+var projectBtn1 = document.querySelector('#projectBtn--1');
+var projectBtn2 = document.querySelector('#projectBtn--2');
 var draggableClasses = ['pin'];
 var currentlyDragged = null;
 
-function playEpisode() {
+function playproject() {
   if(player.paused) {
     playpauseBtn.classList.remove('play');
     playpauseBtn.classList.add('pause');
@@ -20,7 +20,7 @@ function playEpisode() {
     playpauseBtn.classList.remove('pause');
     playpauseBtn.classList.add('play');
     player.pause();
-  }  
+  }
 }
 
 function isDraggable(el) {
@@ -39,12 +39,12 @@ function inRange(event) {
   let direction = rangeBox.dataset.direction;
   if(direction == 'horizontal') {
     var min = rangeBox.offsetLeft;
-    var max = min + rangeBox.offsetWidth;   
+    var max = min + rangeBox.offsetWidth;
     if(event.clientX < min || event.clientX > max) return false;
   } else {
     var min = rect.top;
-    var max = min + rangeBox.offsetHeight; 
-    if(event.clientY < min || event.clientY > max) return false;  
+    var max = min + rangeBox.offsetHeight;
+    if(event.clientY < min || event.clientY > max) return false;
   }
   return true;
 }
@@ -53,7 +53,7 @@ function updateProgress() {
   var current = player.currentTime;
   var percent = (current / player.duration) * 100;
   progress.style.width = percent + '%';
-  
+
   currentTime.textContent = formatTime(current);
 }
 
@@ -74,17 +74,17 @@ function getCoefficient(event) {
   let rect = slider.getBoundingClientRect();
   let K = 0;
   if(slider.dataset.direction == 'horizontal') {
-    
+
     let offsetX = event.clientX - slider.offsetLeft;
     let width = slider.clientWidth;
-    K = offsetX / width;    
-    
+    K = offsetX / width;
+
   } else if(slider.dataset.direction == 'vertical') {
-    
+
     let height = slider.clientHeight;
     var offsetY = event.clientY - rect.top;
     K = 1 - offsetY / height;
-    
+
   }
   return K;
 }
@@ -110,7 +110,7 @@ function togglePlay() {
     playpauseBtn.classList.remove('pause');
     playpauseBtn.classList.add('play');
     player.pause();
-  }  
+  }
 }
 
 function makePlay() {
@@ -120,15 +120,15 @@ function makePlay() {
 
 window.addEventListener('mousedown', function(event) {
   if(!isDraggable(event.target)) return false;
-  
+
   currentlyDragged = event.target;
   let handleMethod = currentlyDragged.dataset.method;
-  
+
   this.addEventListener('mousemove', window[handleMethod], false);
   window.addEventListener('mouseup', () => {
     currentlyDragged = false;
     window.removeEventListener('mousemove', window[handleMethod], false);
-  }, false);  
+  }, false);
 });
 
 playpauseBtn.addEventListener('click', togglePlay);

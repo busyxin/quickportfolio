@@ -31,7 +31,7 @@ body {
   min-height: 100%;
   font-size: 62.5%;
   background-color: #141720;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #F7F7F6;
   display: flex;
   flex-direction: column; }
@@ -39,7 +39,7 @@ body {
     margin-top: 0; }
 
 h1, h2, h3, h4, h5, .title {
-  font-family: 'Rufina', serif; }
+  font-family: 'Roboto', serif; }
 
 a {
   text-decoration: none;
@@ -77,6 +77,10 @@ nav {
 .nav__logo {
   display: block;
   transform: translate3d(20px, 40px, 0); }
+
+.nav__logo img {
+  width: 80px;
+}
 
 .nav__list {
   list-style: none;
@@ -116,10 +120,16 @@ nav {
 .site {
   padding: 2rem 3rem; }
 
+.site__intro {
+  min-width: 500px;
+  max-width: 800px;
+}
+
 .site__title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  position: relative; }
+  position: relative;
+  font-weight: 100; }
   .site__title.site__title--separator:after {
     position: absolute;
     border-bottom: 3px solid #F79E77;
@@ -196,29 +206,25 @@ nav {
 #site__bg {
   display: none; }
 
-.episode {
+.project {
   position: relative;
   display: flex; }
-  .episode:nth-child(1) .episode__image {
-    background-image: url(../images/photos/edited/1.png); }
-  .episode:nth-child(2) .episode__image {
-    background-image: url(../images/photos/edited/2.png); }
-  .episode:nth-child(3) .episode__image {
-    background-image: url(../images/photos/edited/3.png); }
-  .episode:nth-child(4) .episode__image {
-    background-image: url(../images/photos/edited/4.png); }
-  .episode:hover .episode__detail:before {
+  .project:nth-child(1) .project__image {
+    background-image: url(../images/sportan_cover.png); }
+  .project:nth-child(2) .project__image {
+    background-image: url(../images/teamviz_cover.png); }
+  .project:nth-child(3) .project__image {
+    background-image: url(../images/more_cover.png); }
+  .project:hover .project__detail:before {
     width: 100%; }
-  .episode:hover:nth-child(1) .episode__image {
-    background-image: url(../images/photos/original/1.png); }
-  .episode:hover:nth-child(2) .episode__image {
-    background-image: url(../images/photos/original/2.png); }
-  .episode:hover:nth-child(3) .episode__image {
-    background-image: url(../images/photos/original/3.png); }
-  .episode:hover:nth-child(4) .episode__image {
-    background-image: url(../images/photos/original/4.png); }
+  .project:hover:nth-child(1) .project__image {
+    background-image: url(../images/sportan_cover_hover.png); }
+  .project:hover:nth-child(2) .project__image {
+    background-image: url(../images/teamviz_cover_hover.png); }
+  .project:hover:nth-child(3) .project__image {
+    background-image: url(../images/more_cover_hover.png); }
 
-.episode__number {
+.project__number {
   display: none;
   position: absolute;
   top: -2rem;
@@ -228,7 +234,7 @@ nav {
   margin: 0;
   color: #5D6BCF; }
 
-.episode__image {
+.project__image {
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -236,11 +242,11 @@ nav {
   transition: all .1s ease-in-out;
   display: block; }
 
-.episode__media {
+.project__media {
   position: relative;
   width: 30%;
   transition: .2s ease-out; }
-  .episode__media:after {
+  .project__media:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -249,16 +255,16 @@ nav {
     width: 50px;
     height: 50px;
     background-size: cover; }
-  .episode__media:hover {
+  .project__media:hover {
     transform-origin: 0 50%;
     transform: perspective(1000px) rotateY(-10deg) translate3d(-3px, 0, 0); }
 
-.episode__detail {
+.project__detail {
   width: 70%;
   padding: 0 1rem;
   position: relative;
   transition: width .3s ease-in-out; }
-  .episode__detail:before {
+  .project__detail:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -268,99 +274,31 @@ nav {
     background-color: #292C37;
     z-index: -1; }
 
-.episode__title h4 {
+.project__title h4 {
   font-size: 1.6rem;
   margin: 1rem 0 .3rem 0;
   font-family: 'Source Sans Pro', sans-serif;
   color: #F7F7F6; }
-  .episode__title h4:hover {
+  .project__title h4:hover {
     color: #5D6BCF; }
 
-.episode__description {
+.project__description {
   margin-top: 0;
   font-size: 1.1rem;
   font-weight: 100;
   color: #c1bfbf; }
 
-.play-pause-btn {
-  height: 100%;
-  width: 60px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border: none;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #141720;
-  outline: none; }
-  .play-pause-btn.play {
-    background-image: url(../images/play.svg); }
-  .play-pause-btn.pause {
-    background-image: url("../images/pause.svg"); }
-
-.audio-player {
-  position: fixed;
-  background-color: #292C37;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-width: 300px;
-  height: 3.5rem;
+.project-gallery {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
-  .audio-player .play-pause-btn {
-    display: none;
-    cursor: pointer; }
-  .audio-player .spinner {
-    margin-left: 1.4rem;
-    width: 18px;
-    height: 18px;
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/loading.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: spin 0.4s linear infinite; }
-  .audio-player .slider {
-    flex-grow: 1;
-    background-color: #F7F7F6;
-    cursor: pointer;
-    position: relative; }
-    .audio-player .slider .progress {
-      background-color: #7CCDB9;
-      border-radius: inherit;
-      position: absolute;
-      pointer-events: none; }
-      .audio-player .slider .progress .pin {
-        height: 16px;
-        width: 16px;
-        border-radius: 8px;
-        background-color: #7CCDB9;
-        position: absolute;
-        pointer-events: all;
-        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32); }
-  .audio-player .controls {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    color: #55606E;
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 24px;
-    margin-right: 24px; }
-    .audio-player .controls .slider {
-      margin-left: 16px;
-      margin-right: 16px;
-      border-radius: 2px;
-      height: 4px; }
-      .audio-player .controls .slider .progress {
-        width: 0;
-        height: 100%; }
-        .audio-player .controls .slider .progress .pin {
-          right: -8px;
-          top: -6px; }
-    .audio-player .controls span {
-      cursor: default; }
+  flex-wrap: wrap;
+}
+
+.project-gallery-item {
+  max-width: 200px;
+  margin-bottom: 2rem;
+  width: 100%;
+}
 
 /* mobile first*/
 /* Custom, iPhone Retina */
@@ -372,7 +310,7 @@ nav {
   .left .site__title.site__title--separator:after {
     display: none; }
 
-  .right .episode__image {
+  .right .project__image {
     width: 100px;
     float: left;
     margin: 1.5rem 1rem 0 0;
@@ -396,12 +334,12 @@ nav {
     transition: .5s; }
 
   footer {
-    padding-left: 110px;
-    margin-bottom: -1rem; }
+    padding-left: 110px;}
 
   .main {
     display: flex;
-    padding-left: 60px; }
+    padding-left: 60px;
+    flex: 1;}
 
   #site__bg {
     position: absolute;
@@ -415,7 +353,7 @@ nav {
   .site {
     padding-top: 4rem;
     padding-left: 4rem;
-    flex: 1; }
+    flex: 1;}
 
   /* nav */
   .nav__list {
@@ -431,33 +369,34 @@ nav {
   .nav__social {
     display: block; }
 
-  /* episodes */
-  .episodes {
+  /* projects */
+  .projects {
     display: flex;
     flex-wrap: wrap;
     margin: 160px 0 0 50px;
-    max-width: 800px; }
+    /* max-width: 800px;  */
+  }
 
-  .episode {
+  .project {
     flex-direction: column;
     max-width: 220px;
     margin-right: 2rem;
     margin-bottom: 3rem; }
-    .episode:hover .episode__detail:before {
+    .project:hover .project__detail:before {
       display: none; }
 
-  .episode__number {
+  .project__number {
     display: block; }
 
-  .episode__media {
+  .project__media {
     width: 100%;
-    height: 294px;
+    height: 200px;
     max-width: 200px; }
 
-  .episode__detail {
+  .project__detail {
     width: 100%; }
 
-  .episode__description {
+  .project__description {
     font-size: 1rem;
     font-weight: 300; }
 
@@ -475,23 +414,25 @@ nav {
   .left {
     padding-left: 5rem;
     padding-top: 5rem;
+    padding-right: 5rem;
     display: flex;
     flex-direction: column; }
     .left .site__title.site__title--separator:after {
       display: block;
       width: 100px; }
-    .left .episode__date {
+    .left .project__date {
       padding: 1rem 0 2rem 0;
       color: #5D6BCF;
       font-weight: 500;
       font-size: 1rem; }
 
   .right {
+    padding: 11rem 0 0;
     display: flex;
     flex-direction: column;
     background-color: #F7F7F6;
     position: relative; }
-    .right .episode__image {
+    .right .project__image {
       position: absolute;
       top: 0;
       left: 0;
@@ -517,16 +458,6 @@ nav {
   .site__secondary_title {
     display: block; }
 
-  /* audio player */
-  .site__playbar {
-    background: white;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1); }
-
-  .audio-player {
-    position: inherit;
-    background-color: white;
-    margin-right: 5rem;
-    border-radius: 4px; } }
 @media only screen and (min-width: 1400px) {
   .right .site__description {
     column-count: 2; } }
