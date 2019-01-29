@@ -209,21 +209,21 @@ nav {
   .project:nth-child(2) .project__image {
     background-image: url(../images/teamviz/cover.png); }
   .project:nth-child(3) .project__image {
-    background-image: url(../images/more_cover.png); }
+    background-image: url(../images/memory/cover.png); }
   .project:nth-child(4) .project__image {
-    background-image: url(../images/more_cover.png); }
+    background-image: url(../images/petflow/cover.png); }
   .project:nth-child(5) .project__image {
-    background-image: url(../images/more_cover.png); }
+    background-image: url(../images/dinner/cover.png); }
   .project:nth-child(6) .project__image {
-    background-image: url(../images/more_cover.png); }
+    background-image: url(../images/toa/cover.png); }
   .project:nth-child(7) .project__image {
-    background-image: url(../images/more_cover.png); }
+    background-image: url(../images/talonone/cover.png); }
   .project:nth-child(8) .project__image {
-    background-image: url(../images/more_cover.png); }
+    background-image: url(../images/121help/cover.png); }
   .project:nth-child(9) .project__image {
-    background-image: url(../images/more_cover.png); }
+    background-image: url(../images/solarisbank/cover.png); }
   .project:nth-child(10) .project__image {
-    background-image: url(../images/more_cover.png); }
+    background-image: url(../images/valendo/cover.png); }
   .project:hover .project__detail:before {
     width: 100%; }
   .project:hover:nth-child(1) .project__image {
@@ -231,21 +231,21 @@ nav {
   .project:hover:nth-child(2) .project__image {
     background-image: url(../images/teamviz/cover_hover.png); }
   .project:hover:nth-child(3) .project__image {
-    background-image: url(../images/more_cover_hover.png); }
+    background-image: url(../images/memory/cover_hover.png); }
   .project:hover:nth-child(4) .project__image {
-    background-image: url(../images/more_cover_hover.png); }
+    background-image: url(../images/petflow/cover_hover.png); }
   .project:hover:nth-child(5) .project__image {
-    background-image: url(../images/more_cover_hover.png); }
+    background-image: url(../images/dinner/cover_hover.png); }
   .project:hover:nth-child(6) .project__image {
-    background-image: url(../images/more_cover_hover.png); }
+    background-image: url(../images/toa/cover_hover.png); }
   .project:hover:nth-child(7) .project__image {
-    background-image: url(../images/more_cover_hover.png); }
+    background-image: url(../images/talonone/cover_hover.png); }
   .project:hover:nth-child(8) .project__image {
-    background-image: url(../images/more_cover_hover.png); }
+    background-image: url(../images/121help/cover_hover.png); }
   .project:hover:nth-child(9) .project__image {
-    background-image: url(../images/more_cover_hover.png); }
+    background-image: url(../images/solarisbank/cover_hover.png); }
   .project:hover:nth-child(10) .project__image {
-    background-image: url(../images/more_cover_hover.png); }
+    background-image: url(../images/valendo/cover_hover.png); }
 
 
 
@@ -312,7 +312,8 @@ nav {
   margin-top: 0;
   font-size: 1.1rem;
   font-weight: 100;
-  color: #c1bfbf; }
+  color: #c1bfbf;
+  word-break: break-word; }
 
 .project-gallery {
   display: flex;
