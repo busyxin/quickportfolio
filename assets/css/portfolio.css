@@ -205,19 +205,49 @@ nav {
   position: relative;
   display: flex; }
   .project:nth-child(1) .project__image {
-    background-image: url(../images/sportan_cover.png); }
+    background-image: url(../images/sports/cover.png); }
   .project:nth-child(2) .project__image {
-    background-image: url(../images/teamviz_cover.png); }
+    background-image: url(../images/teamviz/cover.png); }
   .project:nth-child(3) .project__image {
+    background-image: url(../images/more_cover.png); }
+  .project:nth-child(4) .project__image {
+    background-image: url(../images/more_cover.png); }
+  .project:nth-child(5) .project__image {
+    background-image: url(../images/more_cover.png); }
+  .project:nth-child(6) .project__image {
+    background-image: url(../images/more_cover.png); }
+  .project:nth-child(7) .project__image {
+    background-image: url(../images/more_cover.png); }
+  .project:nth-child(8) .project__image {
+    background-image: url(../images/more_cover.png); }
+  .project:nth-child(9) .project__image {
+    background-image: url(../images/more_cover.png); }
+  .project:nth-child(10) .project__image {
     background-image: url(../images/more_cover.png); }
   .project:hover .project__detail:before {
     width: 100%; }
   .project:hover:nth-child(1) .project__image {
-    background-image: url(../images/sportan_cover_hover.png); }
+    background-image: url(../images/sports/cover_hover.png); }
   .project:hover:nth-child(2) .project__image {
-    background-image: url(../images/teamviz_cover_hover.png); }
+    background-image: url(../images/teamviz/cover_hover.png); }
   .project:hover:nth-child(3) .project__image {
     background-image: url(../images/more_cover_hover.png); }
+  .project:hover:nth-child(4) .project__image {
+    background-image: url(../images/more_cover_hover.png); }
+  .project:hover:nth-child(5) .project__image {
+    background-image: url(../images/more_cover_hover.png); }
+  .project:hover:nth-child(6) .project__image {
+    background-image: url(../images/more_cover_hover.png); }
+  .project:hover:nth-child(7) .project__image {
+    background-image: url(../images/more_cover_hover.png); }
+  .project:hover:nth-child(8) .project__image {
+    background-image: url(../images/more_cover_hover.png); }
+  .project:hover:nth-child(9) .project__image {
+    background-image: url(../images/more_cover_hover.png); }
+  .project:hover:nth-child(10) .project__image {
+    background-image: url(../images/more_cover_hover.png); }
+
+
 
 .project__number {
   display: none;
@@ -227,7 +257,8 @@ nav {
   z-index: 1;
   font-size: 3rem;
   margin: 0;
-  color: #5D6BCF; }
+  color: #FFF;
+  text-shadow: 1px 1px 1px #000; }
 
 .project__image {
   background-size: cover;
@@ -293,6 +324,10 @@ nav {
   max-width: 200px;
   margin-bottom: 2rem;
   width: 100%;
+}
+
+.project-gallery__item-container {
+  margin: 0 auto;
 }
 
 /* mobile first*/
